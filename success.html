@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Payment Successful</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+    background:#000;
+    color:#fff;
+    font-family:Arial;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:100vh;
+    text-align:center
+}
+.box{
+    border:2px solid #ffcc00;
+    padding:30px;
+    border-radius:12px;
+    max-width:350px
+}
+h1{color:#ffcc00}
+button{
+    margin-top:20px;
+    background:#ffcc00;
+    border:none;
+    padding:14px 20px;
+    font-weight:bold;
+    border-radius:8px;
+    cursor:pointer
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+<h1>Payment Successful✅</h1>
+<p>Your payment has been received.</p>
+<p>Click below to notify us on WhatsApp.</p>
+
+<button onclick="goWhatsApp()">Continue to WhatsApp</button>
+</div>
+
+<script>
+function goWhatsApp(){
+    const params = new URLSearchParams(window.location.search);
+    window.location.href = params.get("wa");
+}
+</script>
+
+</body>
+</html>
